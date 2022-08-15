@@ -85,7 +85,7 @@ export default function Signin() {
         window.location.href = "/todo";
       });
     } else {
-      if (response.statusCode == 404) {
+      if (response.statusCode === 404) {
         swal({
           title: "해당 사용자가 없습니다.",
           text: "해당 정보로 회원가입 하시겠습니까?",

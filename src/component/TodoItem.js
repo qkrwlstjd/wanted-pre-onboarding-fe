@@ -1,13 +1,5 @@
-import React, { useState, useEffect } from "react";
-import {
-  Card,
-  Checkbox,
-  IconButton,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-} from "@material-ui/core";
+import React from "react";
+import { Checkbox, IconButton, ListItemText } from "@material-ui/core";
 import { Grid, Paper } from "@material-ui/core";
 import { Clear, Create } from "@material-ui/icons";
 import swal from "sweetalert";
@@ -17,12 +9,10 @@ const styles = {
     marginLeft: "auto",
   },
   Paper: {
-    margin: "auto",
     padding: 10,
     display: "flex",
     alignItems: "center",
     margin: 10,
-    // width: 500,
   },
 };
 
@@ -67,7 +57,7 @@ function Todo(prop) {
   let todo = prop.todo;
   const handleDelete = async (e) => {
     e.preventDefault();
-    const response = await deleteTodo(todo.id);
+    await deleteTodo(todo.id);
     prop.fetchTodo();
     swal("삭제되었습니다.", "삭제된 TODO: " + todo.todo, "success");
   };
@@ -75,7 +65,7 @@ function Todo(prop) {
   const handleCheck = async (e) => {
     e.preventDefault();
 
-    const response = await updateTodo({
+    await updateTodo({
       ...todo,
       isCompleted: !todo.isCompleted,
     });
@@ -117,7 +107,7 @@ function Todo(prop) {
         swal("빈칸을 입력하셧습니다.");
         return false;
       }
-      const response = await updateTodo({
+      await updateTodo({
         ...todo,
         todo: inputValue,
       });
