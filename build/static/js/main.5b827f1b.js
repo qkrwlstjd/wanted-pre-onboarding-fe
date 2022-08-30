@@ -1,4 +1,4 @@
-/*! For license information please see main.c84eb406.js.LICENSE.txt */
+/*! For license information please see main.5b827f1b.js.LICENSE.txt */
 !(function () {
   var e = {
       3108: function (e, t, n) {
@@ -21936,7 +21936,7 @@
                     return e.abrupt(
                       "return",
                       fetch(
-                        "https://n38lcff1wk.execute-api.ap-northeast-2.amazonaws.com/production/auth/signin",
+                        "https://n38lcff1wk.execute-api.ap-northeast-2.amazonaws.com/auth/signin",
                         {
                           method: "POST",
                           headers: { "Content-Type": "application/json" },
@@ -21967,7 +21967,7 @@
                     return e.abrupt(
                       "return",
                       fetch(
-                        "https://n38lcff1wk.execute-api.ap-northeast-2.amazonaws.com/production/auth/signup",
+                        "https://n38lcff1wk.execute-api.ap-northeast-2.amazonaws.com/auth/signup",
                         {
                           method: "POST",
                           headers: { "Content-Type": "application/json" },
@@ -22819,7 +22819,7 @@
                       e.abrupt(
                         "return",
                         fetch(
-                          "https://n38lcff1wk.execute-api.ap-northeast-2.amazonaws.com/production/todos/" +
+                          "https://n38lcff1wk.execute-api.ap-northeast-2.amazonaws.com/todos/" +
                             t,
                           {
                             method: "DELETE",
@@ -22854,7 +22854,7 @@
                       e.abrupt(
                         "return",
                         fetch(
-                          "https://n38lcff1wk.execute-api.ap-northeast-2.amazonaws.com/production/todos/" +
+                          "https://n38lcff1wk.execute-api.ap-northeast-2.amazonaws.com/todos/" +
                             t.id,
                           {
                             method: "PUT",
@@ -23084,7 +23084,7 @@
                       e.abrupt(
                         "return",
                         fetch(
-                          "https://n38lcff1wk.execute-api.ap-northeast-2.amazonaws.com/production/todos",
+                          "https://n38lcff1wk.execute-api.ap-northeast-2.amazonaws.com/todos",
                           {
                             method: "POST",
                             headers: {
@@ -23122,7 +23122,7 @@
                       e.abrupt(
                         "return",
                         fetch(
-                          "https://n38lcff1wk.execute-api.ap-northeast-2.amazonaws.com/production/todos",
+                          "https://n38lcff1wk.execute-api.ap-northeast-2.amazonaws.com/todos",
                           {
                             method: "GET",
                             headers: { Authorization: "Bearer " + t },
@@ -23300,4 +23300,4 @@
         Or();
     })();
 })();
-//# sourceMappingURL=main.c84eb406.js.map
+//# sourceMappingURL=main.5b827f1b.js.map

@@ -7,6 +7,7 @@ import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
 import TodoItem from "./component/TodoItem";
+import swal from "sweetalert";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
 async function setTodos(todo) {
   const token = localStorage.getItem("access_token");
   return fetch(
-    "https://n38lcff1wk.execute-api.ap-northeast-2.amazonaws.com/production/todos",
+    "https://n38lcff1wk.execute-api.ap-northeast-2.amazonaws.com/todos",
     {
       method: "POST",
       headers: {
@@ -35,14 +36,34 @@ async function setTodos(todo) {
 async function getTodos() {
   const token = localStorage.getItem("access_token");
   return fetch(
-    "https://n38lcff1wk.execute-api.ap-northeast-2.amazonaws.com/production/todos",
+    "https://n38lcff1wk.execute-api.ap-northeast-2.amazonaws.com/todos",
     {
       method: "GET",
       headers: {
         Authorization: "Bearer " + token,
       },
     }
-  ).then((data) => data.json());
+  )
+    .then((data) => {
+      console.log(data);
+      if (data !== 200) {
+        swal({
+          title: "오류가 발생했습니다.",
+          text: "로그인페이지로 돌아가시겠습니까?",
+          icon: "error",
+          buttons: ["아니요(새로고침)", "네"],
+        }).then((YES) => {
+          if (YES) {
+            localStorage.removeItem("access_token");
+            window.location.href = "/";
+          } else {
+            window.location.reload();
+          }
+        });
+      }
+      data.json();
+    })
+    .catch((e) => {});
 }
 
 export default function Profile() {
