@@ -19,7 +19,7 @@ const styles = {
 async function deleteTodo(id) {
   const token = localStorage.getItem("access_token");
   return fetch(
-    "https://5co7shqbsf.execute-api.ap-northeast-2.amazonaws.com/production/todos/" +
+    "https://n38lcff1wk.execute-api.ap-northeast-2.amazonaws.com/production/todos/" +
       id,
     {
       method: "DELETE",
@@ -35,7 +35,7 @@ async function deleteTodo(id) {
 async function updateTodo(todo) {
   const token = localStorage.getItem("access_token");
   return fetch(
-    "https://5co7shqbsf.execute-api.ap-northeast-2.amazonaws.com/production/todos/" +
+    "https://n38lcff1wk.execute-api.ap-northeast-2.amazonaws.com/production/todos/" +
       todo.id,
     {
       method: "PUT",

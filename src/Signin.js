@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
 
 async function loginUser(credentials) {
   return fetch(
-    "https://5co7shqbsf.execute-api.ap-northeast-2.amazonaws.com/production/auth/signin",
+    "https://n38lcff1wk.execute-api.ap-northeast-2.amazonaws.com/production/auth/signin",
     {
       method: "POST",
       headers: {
@@ -52,7 +52,7 @@ async function loginUser(credentials) {
 
 async function signUpUser(credentials) {
   return fetch(
-    "https://5co7shqbsf.execute-api.ap-northeast-2.amazonaws.com/production/auth/signup",
+    "https://n38lcff1wk.execute-api.ap-northeast-2.amazonaws.com/production/auth/signup",
     {
       method: "POST",
       headers: {

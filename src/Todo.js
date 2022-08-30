@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 async function setTodos(todo) {
   const token = localStorage.getItem("access_token");
   return fetch(
-    "https://5co7shqbsf.execute-api.ap-northeast-2.amazonaws.com/production/todos",
+    "https://n38lcff1wk.execute-api.ap-northeast-2.amazonaws.com/production/todos",
     {
       method: "POST",
       headers: {
@@ -35,7 +35,7 @@ async function setTodos(todo) {
 async function getTodos() {
   const token = localStorage.getItem("access_token");
   return fetch(
-    "https://5co7shqbsf.execute-api.ap-northeast-2.amazonaws.com/production/todos",
+    "https://n38lcff1wk.execute-api.ap-northeast-2.amazonaws.com/production/todos",
     {
       method: "GET",
       headers: {
