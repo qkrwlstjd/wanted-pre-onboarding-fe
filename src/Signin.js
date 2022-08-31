@@ -82,7 +82,7 @@ export default function Signin() {
         timer: 2000,
       }).then((value) => {
         localStorage.setItem("access_token", response["access_token"]);
-        window.location.href = "/todo";
+        window.location.href = "/wanted-pre-onboarding-fe/todo";
       });
     } else {
       if (response.statusCode === 404) {
@@ -113,7 +113,7 @@ export default function Signin() {
         timer: 2000,
       }).then((value) => {
         localStorage.setItem("access_token", response["access_token"]);
-        window.location.href = "/todo";
+        window.location.href = "/wanted-pre-onboarding-fe/todo";
       });
     } else {
       swal("Failed", response.message || "", "error");
