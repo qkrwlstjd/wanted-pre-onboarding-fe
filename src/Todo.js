@@ -54,7 +54,7 @@ async function getTodos() {
         }).then((YES) => {
           if (YES) {
             localStorage.removeItem("access_token");
-            window.location.href = "/";
+            window.location.href = "/wanted-pre-onboarding-fe";
           } else {
             window.location.reload();
           }
@@ -92,7 +92,7 @@ export default function Profile() {
 
   const handleLogout = () => {
     localStorage.removeItem("access_token");
-    window.location.href = "/";
+    window.location.href = "/wanted-pre-onboarding-fe";
   };
 
   return (

@@ -15,8 +15,8 @@ function App() {
     <div className="wrapper">
       <BrowserRouter>
         <Routes>
-          <Route path="/todo" element={<Todo />} />
-          <Route path="/" element={<Todo />} />
+          <Route path="/wanted-pre-onboarding-fe/todo" element={<Todo />} />
+          <Route path="/wanted-pre-onboarding-fe" element={<Todo />} />
         </Routes>
       </BrowserRouter>
     </div>
