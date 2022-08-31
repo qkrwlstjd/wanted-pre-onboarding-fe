@@ -45,11 +45,10 @@ async function getTodos() {
     }
   )
     .then((data) => {
-      console.log(data);
-      if (data !== 200) {
+      if (data.status !== 200) {
         swal({
           title: "오류가 발생했습니다.",
-          text: "로그인페이지로 돌아가시겠습니까?",
+          text: "로그인 페이지로 돌아가시겠습니까?",
           icon: "error",
           buttons: ["아니요(새로고침)", "네"],
         }).then((YES) => {
